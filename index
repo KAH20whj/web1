@@ -1,21 +1,19 @@
-<!DOCTYPE HTML>
+<!doctype html>
 <html>
 
 <head>
-    <title>Hello world</title>
+    <title> My First Web</title>
 </head>
 
 <body>
-    <p>
-    <h1>Hello World</h1>
-    </p>
-    <a href="https://www.google.com">
-        <h2>google</h2>
-    </a><br>
-    <img src="https://placehold.it/300x250" />
-    <img src="https://placehold.it/200x150" />
-    <img src="https://dummyimage.com/150x80/4ca837/ff0073&text=dummy
-" />
+    <h1> Header 1</h1>
+    <h2> Header 2</h2>
+    <h3> Header 3</h3>
+    <br>
+    <a href="https://google.com">구글바로가기</a>
+    <img src = "https://placehold.it/300x250" /> 
+    <img src = "https://placehold.it/200x150" /> 
+    <img src = "https://dummyimage.com/150x80/4ca837/ff0073&text=dummy" /> 
 </body>
 
 </html>
