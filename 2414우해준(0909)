@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+    
+    <head>
+        <title> My First Web</title>
+    </head>
+    
+    <body>
+        <h1> 2414 우해준</h1>
+        <h2> Header 2</h2>
+        <h3> Header 3</h3>
+        <a href="https://google.com">Google</a><br><br>
+        <img src="https://placehold.it/300x250" />
+        <img src="https://placehold.it/200x150" />
+        <img src="https://dummyimage.com/150x80/4ca837/ff0073&text=dummy" /><br>
+        <p> Lost Sky - Where We Started (feat. Jex) [NCS Release] </p>
+        <audio src="Lost Sky - Where We Started (feat. Jex) [NCS Release].mp3" controls />
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/N1dGe7ZbHyM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </body>
+
+</html>
