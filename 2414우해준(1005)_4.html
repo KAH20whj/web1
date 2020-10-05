@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <script>
+            var startTime, timer;
+            
+            function start() {
+                startTime = new Date();
+                timer = setInterval(displayTime, 1000);
+                setTimeout(winOpen1, 5000);
+                setTimeout(winOpen2, 10000);
+                setTimeout(stop, 10000);
+            }
+            
+            function displayTime(){
+                var now = new Date();
+                var elapse = ((now - startTime) / 1000).toFixed(0);
+                document.getElementById("Time").innerHTML = "경과시간 : " + elapse; 
+            }
+            
+            function stop() {
+                clearInterval(timer);
+                document.getElementById("displayTime").innerHTML = "경과시간 : 0";
+            }
+            
+            function winOpen1() {
+                win = window.open("", "_blank")
+            }
+            
+            function winOpen2() {
+                win.location.href = "https://kah20whj.github.io/web1/";
+            }
+        </script>
+    </head>
+    
+    <body>
+        <p id="Time">경과시간 : 0</p>
+        <input type="button" value="시작" onclick="start()">
+        <input type="button" value="정지" onclick="stop()">
+    </body>
+    
+</html>
