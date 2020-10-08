@@ -1,0 +1,55 @@
+<!DOCTYPE HTML>
+<html>
+    
+    <head>
+        <title>recursive vs while</title>
+        <script>
+            function ResultFact() {
+                var result = 1;
+                var n = parseInt(document.getElementById("num").value);
+                if(n.length == 0) {
+                    alert("정수를 입력해주세요.");
+                    return;
+                }
+                result = caculateFact(n);
+                document.getElementById("result").innerHTML = "recursive 결과 = " + result;
+            }
+            
+            function ResultWhile() {
+                var result = 1;
+                var n = parseInt(document.getElementById("num").value);
+                if(n.length == 0) {
+                    alert("정수를 입력해주세요.");
+                    return;
+                }
+                result = caculateWhile(n);
+                document.getElementById("result").innerHTML = "while 결과 = " + result;
+            }
+                
+            function caculateFact(n) {
+                if(n <= 1)
+                    return 1;
+                else
+                    return n * caculateFact(n - 1);
+            }
+                
+            function caculateWhile(n) {
+                var result = 1;
+                while(n > 1) {
+                    result *= n--;
+                }
+                return result;
+            }      
+        </script>
+    </head>
+    
+    <body>
+        <p>수를 입력해주세요. : <input type="number" size=3 id="num"></p>
+        <p id="result">여기에 결과 표시</p>
+        <p>
+            <input type="button" value="팩토리얼구하기(재귀)" onclick="ResultFact()">
+            <input type="button" value="팩토리얼구하기(while)" onclick="ResultWhile()">
+        </p>
+    </body>
+    
+</html>

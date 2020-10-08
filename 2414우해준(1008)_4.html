@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>피타고라스의 수</title>
+        <script>
+            document.write("<p>1 ~ 20 사이의 피타고라스의 수 쌍<p>");
+            var n = 20;
+            for(var a = 1; a <= n; a++) {
+                for(var b = 1; b <= n; b++) {
+                    for(var c = 1; c <= n; c++) {
+                        if(a*a + b*b == c*c) {
+                            document.write("("+ a + ", " + b + ", " + c + ")<br>")
+                        }
+                    }
+                }
+            }
+        </script>
+    </head>
+    
+    <body>
+        
+    </body>
+    
+</html>

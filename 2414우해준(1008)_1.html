@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>제어문 연습</title>
+       <script>
+           function Holjjak() {
+               var value = parseInt(document.getElementById("num").value);
+               if(value % 2 == 0)
+                   document.getElementById("result").innerHTML = value + "는 짝수입니다."
+               else
+                   document.getElementById("result").innerHTML = value + "는 홀수입니다."
+           }
+        </script> 
+    </head>
+    
+    <body>
+        <p>수를 입력해주세요. : <input type="number" size=3 id="num"></p>
+        <p id="result"></p>
+        <p><input type="button" value="확인" onclick="Holjjak()"></p>
+    </body>
+    
+</html>
