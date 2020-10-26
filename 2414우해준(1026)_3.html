@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Canvas 2D API-1</title>
+        <script>
+            function drawCircle() {
+                //stroke 테스트
+                var canvas = document.getElementById("canvas");
+                var context = canvas.getContext("2d");
+                
+                var x0 = 10;
+                var y0 = 10;
+                var x1 = 250;
+                var y1 = 10;
+                var x2 = 250;
+                var y2 = 160;
+                var x3 = 10;
+                var y3 = 160;
+                
+                context.beginPath();
+                context.moveTo(x0, y0);
+                context.arcTo(x0, y0, x1, y1, 10);
+                context.arcTo(x1, y1, x2, y2, 10);
+                context.arcTo(x2, y2, x3, y3, 10);
+                context.arcTo(x3, y3, x0, y0, 10);
+                context.arcTo(x0, y0, x1, y1, 10);
+                context.stroke();
+            }
+        </script>
+    </head>
+    <body onload="drawCircle();">
+        <div>
+            <canvas id="canvas" width="400" height="400"></canvas>
+        </div>
+    </body>
+</html>

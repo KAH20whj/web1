@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function drawCircle() {
+                //strock() 테스트
+                var canvas1 = document.getElementById("canvas1");
+                var context1 = canvas1.getContext("2d");
+            
+                //변수 
+                var x = canvas1.width / 4;
+                var y = canvas1.height / 4;
+                var radius = 30;
+                var startAngle = 0 * Math.PI / 180;
+                var endAngle = 270 * Math.PI / 180;
+                
+                //첫번째 테스트
+                context1.beginPath();
+                context1.arc(x, y, radius, startAngle, endAngle);
+                context1.closePath();
+                context1.stroke();
+                
+                //두번째 테스트
+                context1.beginPath();
+                context1.arc(3 * x, y, radius, startAngle, endAngle);
+                context1.stroke();
+            
+                //세번째 테스트
+                context1.beginPath();
+                context1.arc(x, 3 * y, radius, startAngle, endAngle, true);
+                context1.closePath();
+                context1.stroke();
+                
+                //네번째 테스트
+                context1.beginPath();
+                context1.arc(3 * x, 3 * y, radius, startAngle, endAngle, true);
+                context1.stroke();
+                
+                //fill() 테스트
+                var canvas2 = document.getElementById("canvas2");
+                var context2 = canvas2.getContext("2d");
+                
+                //변수 
+                var x = canvas2.width / 4;
+                var y = canvas2.height / 4;
+                var radius = 30;
+                var startAngle = 0 * Math.PI / 180;
+                var endAngle = 270 * Math.PI / 180;
+                
+                //첫번째 테스트
+                context2.beginPath();
+                context2.arc(x, y, radius, startAngle, endAngle);
+                context2.fill();
+                
+                //두번째 테스트
+                context2.beginPath();
+                context2.arc(3 * x, y, radius, startAngle, endAngle);
+                context2.fill();
+            
+                //세번째 테스트
+                context2.beginPath();
+                context2.arc(x, 3 * y, radius, startAngle, endAngle, true);
+                context2.closePath();
+                context2.fill();
+                
+                //네번째 테스트
+                context2.beginPath();
+                context2.arc(3 * x, 3 * y, radius, startAngle, endAngle, true);
+                context2.fill();
+                
+                
+            }
+            
+        </script>
+    </head>
+    <body onload="drawCircle();">
+        <div>
+            <canvas id="canvas1" width="200" height="200"></canvas>
+        </div>
+        <div>
+            <canvas id="canvas2" width="200" height="200"></canvas>
+        </div>
+    </body>
+</html>

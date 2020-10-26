@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function draw() {
+                var radian = Math.PI / 180;
+                
+                var canvas1 = document.getElementById("canvas1");
+                var context1 = canvas1.getContext("2d");
+                
+                var canvas2 = document.getElementById("canvas2");
+                var context2 = canvas2.getContext("2d"); 
+                
+                var x1 = canvas1.width / 6;
+                var y1 = canvas1.height / 4;
+                var x2 = canvas2.width / 6;
+                var y2 = canvas2.height / 4;
+                var radius = 30;
+                var startAngle = 0 * radian;
+                var endAngle;
+                var pos = 1;
+                
+                for(var i = 2; i <= 4; i++) {
+                    endAngle = i * 90 * radian;
+                    
+                    context1.beginPath();
+                    context1.arc(x1 * pos, y1, radius, startAngle, endAngle);
+                    context1.closePath();
+                    context1.stroke();
+                    
+                    context1.beginPath();
+                    context1.arc(x1 * pos, 3 * y1, radius, startAngle, endAngle, true);
+                    context1.stroke();
+                    
+                    context2.beginPath();
+                    context2.arc(x2 * pos, y2, radius, startAngle, endAngle);
+                    context2.fill();
+                    
+                    context2.beginPath();
+                    context2.arc(x2 * pos, 3 * y2, radius, startAngle, endAngle, true);
+                    context2.fill();
+                    
+                    pos += 2;
+                }
+            }
+        </script>
+    </head>
+    <body onload="draw();">
+        <div>
+            <canvas id="canvas1" width="300" height="200"></canvas>
+        </div>
+        <div>
+            <canvas id="canvas2" width="300" height="200"></canvas>
+        </div>
+    </body>
+</html>
