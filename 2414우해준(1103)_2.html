@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Canvas API Text & Images</title>
+        <script>  
+            function drawText() {
+                var canvas = document.getElementById("canvas");
+                var context = canvas.getContext("2d");
+                var textButton = document.getElementById("textButton");
+                context.font = "30px Comic Sans MS";
+                context.fillStyle = "red";
+                context.textAlign = "center";
+                context.fillText("Hello World", canvas.width / 2, canvas.height / 2);
+                textButton.innerHTML = "Text 예제 숨기기";
+                textButton.setAttribute("onclick", "deleteText()");
+            }
+            
+            function drawImage() {
+                var canvas = document.getElementById("canvas");
+                var context = canvas.getContext("2d");
+                var image = document.getElementById("scream");
+                var imageButton = document.getElementById("imageButton");
+                context.drawImage(image, 10, 10);
+                imageButton.innerHTML = "image 예제 숨기기";
+                imageButton.setAttribute("onclick", "deleteImage()");
+            }
+            
+            function deleteText() {
+                var canvas = document.getElementById("canvas");
+                var context = canvas.getContext("2d");
+                var textButton = document.getElementById("textButton");
+                context.clearRect(0, 0, canvas.width, canvas.height);
+                textButton.innerHTML = "Text 예제 보이기";
+                textButton.setAttribute("onclick", "drawText()");
+            }
+            
+            function deleteImage() {
+                var canvas = document.getElementById("canvas");
+                var context = canvas.getContext("2d");
+                var imageButton = document.getElementById("imageButton");
+                context.clearRect(0, 0, canvas.width, canvas.height);
+                imageButton.innerHTML = "Image 예제 보이기";
+                imageButton.setAttribute("onclick", "drawImage()");
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <button id="textButton" type="button" onclick="drawText()">Text 예제 보이기</button>
+            <button id="imageButton" type="button" onclick="drawImage()">Image 예제 보이기</button>
+        </div>
+        <div>
+            <canvas id="canvas" width="400" height="400"></canvas>
+        </div>
+        <img id="scream" width="0" height="0" src="scream.jpg" alt="The Scream">
+    </body>
+</html>
